@@ -1,0 +1,3 @@
+package_upgrade: true
+package : 
+  - nginx
