@@ -1,0 +1,76 @@
+resource "azurerm_virtual_network" "Vnet01" {
+  name                = var.vnet_name
+  location            = var.location
+  resource_group_name = var.resource_group_name
+  address_space       = [var.vnet_address_prefix]
+}
+
+#------------------------- Subnets -----------------------------
+
+resource "azurerm_subnet" "Network_subnets" {
+  count = var.vnet_subnet_count
+  name                 = "${var.resource_prefix}subnet${count.index}"
+  resource_group_name = var.resource_group_name
+  virtual_network_name = azurerm_virtual_network.Vnet01.name
+  address_prefixes     = [cidrsubnet(var.vnet_address_prefix,8,count.index)]
+}
+
+#------------------------ Public Ip address --------------------
+
+    resource "azurerm_public_ip" "Public_Ipaddress" {
+    count = var.public_ip_address_interface
+    name                = "${var.resource_prefix}public-ip01${count.index}"
+    resource_group_name = var.resource_group_name
+    location            = var.location
+    allocation_method   = "Static"
+  }
+
+  #-----------------------Network Interface ------------------
+
+  resource "azurerm_network_interface" "Network_Interface" {
+    count = var.network_interface_count
+    name = "${var.resource_prefix}interface-0${count.index+1}"
+    location            = var.location
+    resource_group_name = var.resource_group_name
+
+    ip_configuration {
+      name                          = "internal"
+      subnet_id                     = azurerm_subnet.Network_subnets[count.index].id
+      private_ip_address_allocation = "Dynamic"
+      public_ip_address_id = azurerm_public_ip.Public_Ipaddress[count.index].id
+    }
+  }
+
+  #------------------- NSG ---------------------------
+
+  resource "azurerm_network_security_group" "Network_Security_Group" {
+    name = "${var.resource_prefix}network-nsg"
+    location            = var.location
+    resource_group_name = var.resource_group_name
+
+  dynamic security_rule {
+      for_each = toset(var.network_security_rules)
+      content {
+      name                       = "Allow-${security_rule.value.destination_port_range}"
+      priority                   =  security_rule.value.priority
+      direction                  = "Inbound"
+      access                     = "Allow"
+      protocol                   = "Tcp"
+      source_port_range          = "*"
+      destination_port_range     = security_rule.value.destination_port_range
+      source_address_prefix      = "*"
+      destination_address_prefix = "*"
+    }
+  }
+  }
+
+  #----------------------------- Network Interface --------------
+
+    resource "azurerm_subnet_network_security_group_association" "subnet_nsg" {
+    count = var.vnet_subnet_count
+    subnet_id                 = azurerm_subnet.Network_subnets[count.index].id
+    network_security_group_id = azurerm_network_security_group.Network_Security_Group.id
+  }
+
+
+  
