@@ -1,1 +1,0 @@
-virtual_machine_name_prefix = "appservices"

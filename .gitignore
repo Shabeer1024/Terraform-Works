@@ -19,3 +19,8 @@ terraform.tfvars
 
 # Crash logs
 crash.log
+
+Ansible/
+Git_GitHub_Playbook/
+Meta_Arguments/
+Providers/
