@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 @'
 # 🏗️ Azure Infrastructure Automation with Terraform
 
 Enterprise-grade Azure infrastructure built using **modular Terraform architecture** —
 real deployments, real patterns, production-ready code.
-=======
-# 🏗️ Azure Infrastructure Automation with Terraform
-
-Enterprise-grade Azure infrastructure built using **modular Terraform architecture**, 
-simulating real-world cloud deployments for banking and enterprise environments.
->>>>>>> 666195c700da1a71267bf5bf51eb247e56c0aacc
 
 ---
 
@@ -34,20 +27,13 @@ simulating real-world cloud deployments for banking and enterprise environments.
 - ✅ **Modular design** — every service is a reusable module
 - ✅ **Separation of concerns** — networking, compute, security split into layers
 - ✅ **No hardcoded secrets** — all sensitive values via variables
-<<<<<<< HEAD
 - ✅ **Production-ready patterns** — clean, scalable, maintainable code
-
-## 📂 Module Structure
-
-=======
-- ✅ **Enterprise patterns** — mirrors real UAE/Gulf banking infrastructure
 
 ---
 
 ## 📂 Module Structure
 
-\`\`\`
->>>>>>> 666195c700da1a71267bf5bf51eb247e56c0aacc
+~~~
 ├── modules/
 │   ├── networking/
 │   │   ├── vnet/
@@ -64,41 +50,20 @@ simulating real-world cloud deployments for banking and enterprise environments.
 ├── variables.tf
 ├── providers.tf
 └── terraform.tfvars.example
-<<<<<<< HEAD
-=======
-\`\`\`
->>>>>>> 666195c700da1a71267bf5bf51eb247e56c0aacc
+~~~
 
 ---
 
 ## 🚀 How to Use
 
-<<<<<<< HEAD
-```bash
+~~~bash
 git clone https://github.com/Shabeer1024/Terraform-Works.git
 cd "Azure Firewall"
 cp terraform.tfvars.example terraform.tfvars
 terraform init
 terraform plan
 terraform apply
-```
-=======
-\`\`\`bash
-# Clone the repo
-git clone https://github.com/Shabeer1024/Terraform-Works.git
-
-# Navigate to any lab
-cd "Azure Firewall"
-
-# Copy and fill variables
-cp terraform.tfvars.example terraform.tfvars
-
-# Deploy
-terraform init
-terraform plan
-terraform apply
-\`\`\`
->>>>>>> 666195c700da1a71267bf5bf51eb247e56c0aacc
+~~~
 
 ---
 
@@ -115,13 +80,7 @@ terraform apply
 
 ## 👨‍💻 Author
 
-<<<<<<< HEAD
-**Shabeer** — Azure Architect | AZ-140 | AZ-700 | ITIL V4
+**Shabeer** — Azure Architect | AZ-140 | AZ-700
 🔗 [LinkedIn](https://www.linkedin.com/in/shabeer-s-82690a156/)
 ☁️ Cloud Architect | 13 Years Enterprise IT
 '@ | Set-Content "README.md"
-=======
-**Shabeer** — Azure EUC Architect | AZ-104 | AZ-700 | 
-🔗 [LinkedIn](https://www.linkedin.com/in/shabeer-s-82690a156/)  
-📧 Cloud Architect | 13 Years Enterprise IT
->>>>>>> 666195c700da1a71267bf5bf51eb247e56c0aacc
