@@ -18,3 +18,6 @@ variable "resource_tags" {
     tier=string 
   }))
 }
+
+
+

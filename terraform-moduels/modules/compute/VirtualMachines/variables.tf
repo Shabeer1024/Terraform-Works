@@ -13,3 +13,7 @@ variable "virtual_machine_count" {
 variable "virtual_network_interfaces_ids" {
   type = list(string)
 }
+
+
+
+

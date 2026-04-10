@@ -108,3 +108,7 @@ resource "azurerm_subnet" "frontend01" {
   }
 
 
+
+
+
+

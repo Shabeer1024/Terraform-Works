@@ -45,3 +45,6 @@ module "virtualMachine-Scale-Set" {
   virtual_machine_pool_id = module.load-balance.backend_address_pool_id
   virtual_network_subnet_id = module.network.virtual_network_subnet_id
 }
+
+
+

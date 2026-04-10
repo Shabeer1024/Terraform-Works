@@ -37,3 +37,6 @@ variable "network_security_rules" {
 variable "virtual_machine_count" {
   type = string
 }
+
+
+

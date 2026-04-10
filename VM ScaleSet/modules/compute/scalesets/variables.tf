@@ -21,3 +21,6 @@ variable "virtual_network_subnet_id" {
 variable "virtual_machine_pool_id" {
     type = string
 }
+
+
+

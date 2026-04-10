@@ -17,3 +17,6 @@ variable "network_interface_private_ip_address" {
 variable "virtual_network_id" {
   type = string
 }
+
+
+

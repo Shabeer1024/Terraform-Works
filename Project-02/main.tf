@@ -126,7 +126,7 @@ resource "azurerm_subnet" "backend01" {
     location            = local.resource_location
     size                = "Standard_B2s"
     admin_username      = "adam"
-    admin_password      = "Bankfab.1234$"
+    admin_password      = "DummyP@ssword123!"
     disable_password_authentication = false
     network_interface_ids = [
     azurerm_network_interface.frontinterface[each.key].id
@@ -153,7 +153,7 @@ resource "azurerm_subnet" "backend01" {
     location            = local.resource_location
     size                = "Standard_B2s"
     admin_username      = "adam"
-    admin_password      = "Bankfab.1234$"
+    admin_password      = "DummyP@ssword123!"
     disable_password_authentication = false
     network_interface_ids = [
     azurerm_network_interface.backinterface[each.key].id
@@ -171,3 +171,6 @@ resource "azurerm_subnet" "backend01" {
       version   = "latest"
     }
   }
+
+
+

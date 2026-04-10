@@ -10,3 +10,6 @@ variable "virtual_machine_count" {
     error_message = "The number of virtual machine should not exceed 5"
   }
 }
+
+
+

@@ -5,3 +5,6 @@ locals {
     production_tier="${var.resource_tags.tags.tier}"
   }
 }
+
+
+

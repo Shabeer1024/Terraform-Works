@@ -25,3 +25,6 @@ variable "vm_count" {
   description = "Number of Linux VMs to create"
   default     = 3
 }
+
+
+

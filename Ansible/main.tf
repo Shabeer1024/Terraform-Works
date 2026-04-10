@@ -107,3 +107,6 @@ resource "azurerm_public_ip" "webip01" {
       version   = "latest"
     }
   }
+
+
+

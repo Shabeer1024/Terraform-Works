@@ -18,3 +18,6 @@ variable "admin_password" {
   description = "This is the admin password of the Virtual Machine"
   sensitive = true
 }
+
+
+

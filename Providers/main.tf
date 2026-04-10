@@ -5,3 +5,6 @@ data "local_file" "locals" {
 output "filedetails" {
   value = data.local_file.locals.content
 }
+
+
+

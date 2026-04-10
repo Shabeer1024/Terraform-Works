@@ -48,3 +48,7 @@
 #   probe_id = azurerm_lb_probe.probeA.id
 #   backend_address_pool_ids = [azurerm_lb_backend_address_pool.virtual_machine_pool.id]  
 # } 
+
+
+
+

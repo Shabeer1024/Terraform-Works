@@ -45,3 +45,6 @@ variable "virtual_machine_count" {
 variable "resource_prefix" {
   type = string
 }
+
+
+

@@ -5,7 +5,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "ScalesetVM" {
   sku                 = "Standard_B1s"
   instances           = 2
   admin_username      = "adam"
-  admin_password      = "Bankfab.1234$"
+  admin_password      = "DummyP@ssword123!"
   disable_password_authentication = false
   custom_data = data.local_file.cloudinit.content_base64
 
@@ -37,3 +37,6 @@ resource "azurerm_linux_virtual_machine_scale_set" "ScalesetVM" {
   data "local_file" "cloudinit" {
     filename = "./modules/compute/scalesets/cloudinit"
   }
+
+
+

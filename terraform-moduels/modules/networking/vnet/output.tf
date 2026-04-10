@@ -13,3 +13,6 @@ output "virtual_network_id" {
 output "network_interface_private_ip_address" {
   value = azurerm_network_interface.Network_Interface[*].private_ip_address
 }
+
+
+

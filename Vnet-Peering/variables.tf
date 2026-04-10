@@ -54,3 +54,6 @@ variable "environment" {
     virtual_machine_count = number
   }))
 }
+
+
+

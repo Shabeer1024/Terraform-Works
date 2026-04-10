@@ -17,3 +17,6 @@ output "network_interface_private_ip_address" {
 output "virtual_network_subnet_id"  {
   value = azurerm_subnet.Network_subnets[*].id
 }
+
+
+

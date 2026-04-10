@@ -2,3 +2,6 @@
     name     = "NetworkRG"
     location = local.resource_location
   }
+
+
+

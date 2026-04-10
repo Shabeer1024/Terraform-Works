@@ -74,3 +74,6 @@ resource "azurerm_subnet" "Network_subnets" {
 
 
   
+
+
+

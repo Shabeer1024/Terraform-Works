@@ -30,3 +30,6 @@ resource "azurerm_windows_web_app" "WebApp" {
   }
   tags = local.production_tags
 } 
+
+
+

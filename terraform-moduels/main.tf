@@ -34,3 +34,6 @@ module "load-balance" {
   virtual_network_id = module.network.virtual_network_id
   network_interface_private_ip_address = module.network.network_interface_private_ip_address  
 }
+
+
+

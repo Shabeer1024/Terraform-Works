@@ -5,7 +5,7 @@ resource "azurerm_linux_virtual_machine" "Lion-DC" {
     location            = var.location
     size                = "Standard_B2s"
     admin_username      = "adam"
-    admin_password      = "Bankfab.1234$"
+    admin_password      = "DummyP@ssword123!"
     disable_password_authentication = false
     network_interface_ids = [
     var.virtual_network_interfaces_ids[count.index]
@@ -27,3 +27,7 @@ resource "azurerm_linux_virtual_machine" "Lion-DC" {
   data "local_file" "cloudinit" {
     filename = "./modules/compute/VirtualMachines/cloudinit"
   }
+
+
+
+

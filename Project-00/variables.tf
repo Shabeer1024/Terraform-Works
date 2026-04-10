@@ -19,3 +19,6 @@ type = string
 description = "This is the size of the Virtual Mechine"
 default = "Standard_B2s"  
 }
+
+
+

@@ -30,3 +30,6 @@ variable "admin_username" {
   description = "This is the admin Username of the Virtual Machine"
   sensitive = true  
 }
+
+
+
