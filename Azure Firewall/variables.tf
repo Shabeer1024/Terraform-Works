@@ -50,7 +50,7 @@ variable "firewall_private_ip" {
 
 variable "allowed_mgmt_ips" {
   type    = list(string)
-  default = ["49.206.134.22"]                  # replace with your IP
+  default = ["123.123.123.123"]                  # replace with your IP
 }
 
 variable "lion_dc1_private_ip" {
